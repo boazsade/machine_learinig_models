@@ -1,0 +1,51 @@
+{
+    "dataset": "59705aa8aa39d855e5678b50",
+    "datasource": {
+            "path": "/home/boaz/work/binah_be/src/apps/run_experiments/ut/input.csv"
+    },
+    "model": {
+        "class": "tar",
+        "type": "classifier",
+        "repeations": 1
+    },
+    "actions": [
+        {
+            "action": "model.em",
+            "attr": {
+                "clusters": 5,
+                "cluster-min": 20, 
+                "temination-count": 0.01, 
+                "shape": "diagonal"
+            }
+        },
+        {
+            "action": "model.svm",
+            "attr": {
+                "kernel": "rbf"
+            }
+        },
+        {
+            "action": "model.boosting",
+            "attr": {
+                "max-categories": 10,
+                "cv-fold": 1,
+                "max-depth":-1,
+                "min-samples":10,
+                "use-surrogates":false,
+                "flags": "auto",
+                "weak-count": 100,
+                "type": "real",
+                "weight-trim-rate": 0.97
+            }
+        }
+    ],
+    "evaluation": [
+        "auc-roc", "ks-test"
+    ],
+    "validation": {
+        "action": "precent",
+        "attr": {
+            "arg": 10
+        }
+    }
+}

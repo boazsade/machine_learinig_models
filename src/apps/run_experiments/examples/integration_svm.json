@@ -1,0 +1,32 @@
+{
+  "dataset": "59705aa8aa39d855e5678b50",
+  "datasource": {
+    "path": "/home/boaz/work/binah_be/src/apps/data_clean/examples2/export.csv"
+  },
+  "model": {
+    "class": "db10969b-b055-4e10-a4da-d85340048ef2",
+    "type": "classifier",
+    "repeations": 1
+  },
+  "actions": [
+    {
+      "action": "model.SVM",
+      "attr": {
+                "termination-count": 90,
+                "termination-epsilon": 0.00001,
+                "kernel": "rbf"
+      }
+    }
+  ],
+  "evaluation": [
+    "AUC-ROC",
+    "Logisic-Los",
+    "KS-test"
+  ],
+  "validation": {
+    "action": "precent",
+    "attr": {
+      "arg": 10
+    }
+  }
+}

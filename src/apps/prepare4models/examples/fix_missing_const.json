@@ -1,0 +1,21 @@
+{
+	"dataset": "59705aa8aa39d855e5678b50",
+	"datasource": {
+		"path": "/home/boaz/inputs/files"
+	},
+	"export": {
+		"type": "csv",
+		"path": "/tmp/export_dataclean.csv"
+	},
+	"actions": [
+                {
+			"action": "fix.missing",
+			"attr": {
+				"colid": "age",
+                                "algo": "const",
+				"rows": [8, 18, 19, 20, 21, 22, 30, 29],
+                                "value": 3.44
+			}
+		}
+	]
+}

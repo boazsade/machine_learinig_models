@@ -1,0 +1,73 @@
+{
+	"dataset": "59705aa8aa39d855e5678b50",
+	"datasource": {
+		"path": "/home/boaz/inputs/files"
+	},
+	"export": {
+		"type": "csv",
+		"path": "/tmp/exports/boaz_tests.csv"
+	},
+	"actions": [
+                {
+			"action": "filter.rows",
+			"attr": {
+				"colid": "age",
+				"rows": [1, 2, 3]
+			}
+		},
+                {
+			"action": "filter.rows",
+			"attr": {
+				"colid": "StartTime",
+				"rows": [6, 12, 53]
+			}
+		},
+		{
+			"action": "normalized",
+			"attr": {
+				"colid": "StartTime",
+				"algo": "min-max",
+				"min": 23.1,
+				"max": 33.4
+			}
+		},
+		{
+			"action": "normalized",
+			"attr": {
+				"colid": "age",
+				"algo": "znorm"
+			}
+		},
+		{
+			"action": "normalized",
+			"attr": {
+				"colid": "marital",
+				"algo": "max"
+			}
+		},
+		{
+			"action": "normalized",
+			"attr": {
+				"colid": "matrial",
+				"algo": "tnorm"
+			}
+		},
+		{
+			"action": "fix.missing",
+			"attr": {
+				"colid": "StartTime",
+				"algo": "kneighborhood",
+				"count": 3,
+				"rows": [11, 43, 67]
+			}
+		},
+		{
+			"action": "fix.missing",
+			"attr": {
+				"colid": "data",
+				"algo": "cubical",
+				"rows": [1893, 2343, 99975]
+			}
+		}
+	]
+}

@@ -1,0 +1,20 @@
+age,job,marital,loan++month,campaign
+44,blue-collar,married,no++aug,1
+53,technician,married,no++nov,1
+28,management,single,no++jun,3
+39,services,married,no++apr,2
+55,retired,married,no++aug,1
+30,management,divorced,no++jul,8
+37,blue-collar,married,no++may,1
+39,blue-collar,divorced,no++may,1
+NULL,admin.,married,no++jun,1
+27,blue-collar,single,no++apr,2
+34,housemaid,single,no++may,2
+41,management,married,no++aug,1
+55,management,married,no++aug,3
+33,services,divorced,no++may,5
+26,admin.,NULL,yes++jun,1
+52,services,NULL,no++jul,2
+35,services, ,no++apr,2
+27,admin., ,no++oct,1
+NULL,blue-collar,,no++may,1

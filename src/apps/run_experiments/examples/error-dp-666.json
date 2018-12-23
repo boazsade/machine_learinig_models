@@ -1,0 +1,95 @@
+{
+  "dataset": "5ae63ae40125b104b5464dd7",
+  "datasource": {
+    "path": "/opt/binah/dataset/5ae63ae40125b104b5464dd7/post-clean.csv"
+  },
+  "model": {
+    "class": "80ec8290-0fa6-4ab5-a88d-d03c59c9a648",
+    "type": "classifier",
+    "repeations": 1
+  },
+  "actions": [
+    {
+      "action": "model.boosting",
+      "attr": {
+        "min-samples": 10,
+        "cv-fold": 1,
+        "weight-trim-rate": 0.97,
+        "max-depth": -1,
+        "flags": "auto",
+        "weak-count": 100,
+        "use-surrogates": false,
+        "type": "real",
+        "max-categories": 10
+      },
+      "label": "Boosting"
+    },
+    {
+      "action": "model.rtrees",
+      "attr": {
+        "count": 1,
+        "type": "brute-force"
+      },
+      "label": "K-Nearest Neighbors"
+    },
+    {
+      "action": "model.em",
+      "attr": {
+        "temination-count": 0.01,
+        "clusters": 5,
+        "shape": "diagonal",
+        "cluster-min": 20
+      },
+      "label": "Expectation Maximization"
+    },
+    {
+      "action": "model.dtrees",
+      "attr": {
+        "min-samples": 10,
+        "cv-fold": 1,
+        "max-depth": -1,
+        "flags": "auto",
+        "use-surrogates": false,
+        "max-categories": 10
+      },
+      "label": "Decision Trees"
+    },
+    {
+      "action": "model.rtrees",
+      "attr": {
+        "min-samples": 10,
+        "cv-fold": 0,
+        "max-depth": -1,
+        "flags": "auto",
+        "var-importance": false,
+        "use-surrogates": false,
+        "regression-accuracy": 0.001,
+        "max-categories": 10
+      },
+      "label": "Random Trees"
+    },
+    {
+      "action": "model.svm",
+      "attr": {
+        "kernel": "rbf"
+      },
+      "label": "Support Vector Machine"
+    }
+  ],
+  "evaluation": [
+    "auc-roc",
+    "mse",
+    "ks-test"
+  ],
+  "validation": {
+    "action": "precent",
+    "attr": {
+      "arg": 20,
+      "randomized": false
+    }
+  },
+  "export": {
+    "type": "yml",
+    "path": "/opt/binah/dataset/5ae63b210125b104b5464e9e.yml"
+  }
+}

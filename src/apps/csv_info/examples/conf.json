@@ -1,0 +1,10 @@
+{
+        "conf": {
+            "delimiter": ",",
+            "quote": "\"",
+            "firstRow": 20,
+            "otherRow": 1,
+            "inputFiles": ["/home/boaz/work/binah_be/src/apps/csv_info/examples/small.csv" 
+                            ]
+        }
+}

@@ -1,0 +1,132 @@
+{
+  "dataset": "59705aa8aa39d855e5678b50",
+  "datasource": {
+    "files": [
+      "/home/boaz/work/binah_be/scripts/binahbe/examples/for_test.csv"
+    ],
+    "settings": {
+      "firstRow": 0,
+      "separator": ",",
+      "quote": "\"",
+      "escape": "\""
+    }
+  },
+  "schema": {
+    "cols": [
+      {
+        "colid": "age"
+      },
+      {
+        "colid": "job"
+      },
+      {
+        "colid": "marital"
+      },
+      {
+        "colid": "loan++month"
+      },
+      {
+        "colid": "campaign"
+      }
+    ]
+  },
+  "actions": [
+    {
+        "action": "col.type",
+        "attr": {
+            "colid": "age",
+            "dataType": "number",
+            "dataClass": "numeric",
+            "attr": {
+                "missing_list": [
+                    "N/A",
+                    "NULL",
+                    "-1",
+                    "null",
+                    "n/a"
+                ],
+                "bin_count": 10,
+                "resolution": 3
+           }
+        }
+    },
+    {
+        "action": "col.type",
+        "attr": {
+            "colid": "job",
+            "dataClass": "categorial",
+            "dataType": "string",
+            "attr": {
+                "unique_limit": 1000
+            }
+        }
+    },
+    {
+        "action": "col.type",
+        "attr": {
+            "colid": "marital",
+            "dataClass": "categorial",
+            "dataType": "string",
+            "attr": {
+                "unique_limit": 1000
+            }
+        }
+    },
+    {
+        "action": "col.type",
+        "attr": {
+            "colid": "loan++month",
+            "dataClass": "categorial",
+            "dataType": "string",
+            "attr": {
+                "unique_limit": 1000
+            }
+        }
+    },
+    {
+        "action": "col.type",
+        "attr": {
+            "colid": "campaign",
+            "dataClass": "number",
+            "dataType": "numeric",
+            "attr": {
+                "missing_list": [
+                    "N/A",
+                    "NULL",
+                    "-1",
+                    "null",
+                    "n/a"
+                ],
+                "bin_count": 10,
+                "resolution": 3
+           }
+        }
+    },
+    {
+      "action": "col.split",
+        "attr": {
+            "colid": {
+                "first": "loan",
+                "second": "month",
+                "source": "loan++month"
+            },
+            "split": {
+                "type": "character",
+                "value":  "++"
+            },
+            "attr": {
+                "dataType": "string",
+                "dataClass": "categorial",
+                "attr": {
+                    "unique_limit": 100
+                }
+            }
+        }
+    }
+  ],
+  "export": {
+            "format": "csv",
+            "path": "/tmp/export_data"
+  }
+}
+

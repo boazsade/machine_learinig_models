@@ -1,0 +1,76 @@
+{
+    "dataset": "5a000dd0b3897e1dc3806806",
+    "datasource": {
+        "path": "/tmp/hsperfdata_boaz/5a1d193139d8f31c86f63b5b"
+    },
+    "model": {
+        "name": "model.svm",
+        "type": "classifier",
+        "path": "/home/boaz/work/binah_be/src/apps/run_experiments/ut/model.yml"
+    },
+    "actions": [{
+        "action": "normalized",
+        "attr": {
+            "colid": "4f9371db-7ded-498b-909d-4a1782680d5c",
+            "algo": "znorm",
+            "minval": 23,
+            "maxval": 87,
+            "mean": 40.438596491228068,
+            "STD": 12.294042610519664
+        }
+    }, {
+        "action": "normalized",
+        "attr": {
+            "colid": "30f70ef5-fc5b-452c-ba5a-e477c377f8c9",
+            "algo": "min-max",
+            "min": 0,
+            "max": 1,
+            "minval": -6.7601512939619779e+18,
+            "maxval": 8.9994055330649364e+18,
+            "mean": -2.5797565799023048e+18,
+            "STD": 5.4954875072639529e+18
+        }
+    }, {
+        "action": "normalized",
+        "attr": {
+            "colid": "73c74882-da5d-4333-9cb2-9f5e119d4a25",
+            "algo": "znorm",
+            "minval": 1,
+            "maxval": 5,
+            "mean": 3,
+            "STD": 1.1495340671022201
+        }
+    }, {
+        "action": "normalized",
+        "attr": {
+            "colid": "a37c299d-3695-407c-a088-ec0783ed7544",
+            "algo": "znorm",
+            "minval": 1,
+            "maxval": 57,
+            "mean": 29,
+            "STD": 16.598192672697831
+        }
+    }, {
+        "action": "normalized",
+        "attr": {
+            "colid": "4d183a90-3662-475c-8911-597433f11463",
+            "algo": "min-max",
+            "min": -1,
+            "max": 1,
+            "minval": -8.9024822563038269e+18,
+            "maxval": 8.3308439440534231e+18,
+            "mean": 2.6786270737819469e+17,
+            "STD": 5.2041145975432356e+18
+        }
+    }, {
+        "action": "normalized",
+        "attr": {
+            "colid": "ce6ce330-0ced-4846-a414-2308731791a6",
+            "algo": "max",
+            "minval": -7.1255084970859377e+18,
+            "maxval": 1.7976931348623157e+308,
+            "mean": 3.1538476050216067e+306,
+            "STD": 1
+        }
+    }]
+}

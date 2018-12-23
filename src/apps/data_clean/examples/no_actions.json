@@ -1,0 +1,17 @@
+
+
+{
+  "dataset": "5ae8161a0125b104b546571b",
+  "datasource": {
+    "path": "/home/boaz/tmp/5adf1e85a343f90047a47e83/"
+  },
+  "export": {
+    "type": "csv",
+    "path": "/tmp/no_actions.csv"
+  },
+  "actions": [
+    
+  ]
+}
+
+

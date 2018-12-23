@@ -1,0 +1,36 @@
+{
+    "dataset": "59705aa8aa39d855e5678b50",
+    "datasource": {
+            "path": "/home/boaz/inputs/export_bad"
+    },
+    "actions": [
+        {
+            "action": "outlier.find",
+            "attr": {
+                "colid": "one"
+            }
+        },
+        {
+            "action": "filter.dup",
+            "attr": {
+                "colid": "two",
+                "resolution": 3,
+                "keep": "first"
+            }
+        },
+        {
+            "action": "filter.dup",
+            "attr": {
+                "colid": "three",
+                "resolution": 5,
+                "keep": "last"
+            }
+        },
+        {
+            "action": "outlier.find",
+            "attr": {
+                "colid": "four"
+            }
+        }
+    ]
+}

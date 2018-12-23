@@ -1,0 +1,60 @@
+{
+    "dataset": "59705aa8aa39d855e5678b50",
+    "datasource": {
+            "path": "/home/boaz/work/binah_be/src/apps/detect_duplicates/tmp/5a8189afe6e3ab04f1ffa97b"
+    },
+    "actions": [
+        {
+            "action": "outlier.find",
+            "attr": {
+                "colid": "e08a0281-755c-4ec5-b28f-cd30b3a906c2"
+            }
+        },
+        {
+            "action": "outlier.find",
+            "attr": {
+                "colid": "9d6514f4-c95e-4c2b-9da6-f055a71dbc57"
+            }
+        },
+        {
+            "action": "outlier.find",
+            "attr": {
+                "colid": "998fee08-0d7e-4c30-837a-9d21ea549666"
+            }
+        },
+        {
+            "action": "filter.dup",
+            "attr": {
+                "colid": "e08a0281-755c-4ec5-b28f-cd30b3a906c2",
+                "resolution": 3,
+                "keep": "first"
+            }
+        },
+        {
+            "action": "filter.dup",
+            "attr": {
+                "colid": "7129d322-1993-4938-ad1d-cd37b8e8503b",
+                "resolution": 5,
+                "keep": "last"
+            }
+        },
+        {
+            "action": "outlier.find",
+            "attr": {
+                "colid": "9f395881-08fe-4f5b-98ef-e121f88c798b"
+            }
+        },
+        {
+            "action": "outlier.find",
+            "attr": {
+                "colid": "ff0c8e90-4855-49da-bcba-7b258f9a6962"
+            }
+        },
+        {
+            "action": "outlier.find",
+            "attr": {
+                "colid": "7129d322-1993-4938-ad1d-cd37b8e8503b"
+            }
+        }
+    ]
+}

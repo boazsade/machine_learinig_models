@@ -1,0 +1,11 @@
+{
+    "dataset": "5a000dd0b3897e1dc3806806",
+    "datasource": {
+        "path": "/tmp/hsperfdata_boaz/5a1d193139d8f31c86f63b5b"
+    },
+    "model": {
+        "name": "model.boosting",
+        "type": "classifier",
+        "path": "/home/boaz/work/binah_be/src/apps/run_experiments/ut/model.yml"
+    }
+}

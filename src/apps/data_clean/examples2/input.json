@@ -1,0 +1,52 @@
+{
+    "dataset": "5a1d193139d8f31c86f63b5b",
+    "datasource": {
+        "path": "/home/boaz/work/binah_be/src/apps/data_clean/examples2/data"
+    },
+    "export": {
+        "type": "csv",
+        "path": "/home/boaz/work/binah_be/src/apps/data_clean/examples2/exporti.csv"
+    },
+    "actions": [{
+        "action": "fix.missing",
+        "attr": {
+            "colid": "db10969b-b055-4e10-a4da-d85340048ef2",
+            "algo": "cubical",
+            "rows": [22, 43]
+        }
+    }, {
+        "action": "normalized",
+        "attr": {
+            "colid": "db10969b-b055-4e10-a4da-d85340048ef2",
+            "algo": "znorm"
+        }
+    }, {
+        "action": "normalized",
+        "attr": {
+            "colid": "bc41409a-66dc-4fe0-a31f-b0da67f18937",
+            "algo": "tnorm"
+        }
+    }, {
+        "action": "normalized",
+        "attr": {
+            "colid": "12002adb-8eb9-48ac-9169-aae54af59624",
+            "algo": "tnorm"
+        }
+    }, {
+        "action": "normalized",
+        "attr": {
+            "colid": "b7f890a0-75e2-4fc0-89d2-dc799480a3f8",
+            "algo": "min-max",
+            "min": 20,
+            "max": 30
+        }
+    }, {
+        "action": "normalized",
+        "attr": {
+            "colid": "6005cb90-93b7-4efc-afb7-1254be6f8e92",
+            "algo": "min-max",
+            "min": 20,
+            "max": 30
+        }
+    }]
+}

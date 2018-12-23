@@ -1,0 +1,22 @@
+{ 
+    "status": 
+    {
+        "value": "OK",
+        "msg":"finish successfully",
+        "details":"successfully finish processing data from /home/boaz/work/binah_be/src/apps/run_experiments/ut/"
+    },
+    "predictions": [
+        {
+            "row": 1,
+            "status": "removed"
+        },
+        {
+            "row": 2,
+            "value": 2.442
+        },
+        {
+            "row": 3,
+            "value": 234.234
+        }
+    ]
+}

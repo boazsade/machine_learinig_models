@@ -1,0 +1,93 @@
+{
+	"dataset": "59705aa8aa39d855e5678b50",
+	"datasource": {
+		"path": "/home/boaz/inputs/files"
+	},
+	"export": {
+		"type": "csv",
+		"path": "/tmp/export_dataclean.csv"
+	},
+	"actions": [
+                {
+			"action": "filter.rows",
+			"attr": {
+				"colid": "age",
+				"rows": [1, 2, 3]
+			}
+		},
+                {
+			"action": "fix.missing",
+			"attr": {
+				"colid": "age",
+                                "algo": "linear",
+				"rows": [8, 18, 19, 20, 21, 22, 29, 30]
+			}
+		},
+		{
+			"action": "fix.missing",
+			"attr": {
+				"colid": "StartTime",
+				"algo": "linear",
+				"rows": [16, 27, 36]
+			}
+		},
+                {
+			"action": "filter.rows",
+			"attr": {
+				"colid": "StartTime",
+				"rows": [6, 12, 53]
+			}
+		},
+		{
+			"action": "normalized",
+			"attr": {
+				"colid": "StartTime",
+                                "type": "inteval",
+				"algo": "min-max",
+				"min": 0,
+				"max": 1
+			}
+		},
+		{
+			"action": "normalized",
+			"attr": {
+				"colid": "age",
+                                "type": "numeric",
+				"algo": "znorm"
+			}
+		},
+		{
+			"action": "normalized",
+			"attr": {
+				"colid": "foo",
+                                "type": "numeric",
+				"algo": "max"
+			}
+		},
+		{
+			"action": "normalized",
+			"attr": {
+				"colid": "matrial",
+                                "type": "catgorial",
+				"algo": "max"
+			}
+		},
+		{
+			"action": "fix.missing",
+			"attr": {
+				"colid": "status",
+				"algo": "kneighborhood",
+				"count": 3,
+				"rows": [11, 43, 675]
+			}
+		},
+		{
+			"action": "fix.missing",
+			"attr": {
+				"colid": "data",
+				"algo": "cubical",
+				"rows": [1893, 2343, 99975]
+			}
+		}
+	]
+}

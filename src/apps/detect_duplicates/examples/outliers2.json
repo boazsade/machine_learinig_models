@@ -1,0 +1,36 @@
+{
+    "dataset": "59705aa8aa39d855e5678b50",
+    "datasource": {
+            "path": "/home/boaz/inputs/files"
+    },
+    "actions": [
+        {
+            "action": "outlier.find",
+            "attr": {
+                "colid": "age"
+            }
+        },
+        {
+            "action": "filter.dup",
+            "attr": {
+                "colid": "StartTime",
+                "resolution": 3,
+                "keep": "first"
+            }
+        },
+        {
+            "action": "filter.dup",
+            "attr": {
+                "colid": "marital",
+                "resolution": 5,
+                "keep": "last"
+            }
+        },
+        {
+            "action": "outlier.find",
+            "attr": {
+                "colid": "StartTime"
+            }
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "dataset": "59705aa8aa39d855e5678b50",
+    "datasource": {
+            "path": "/home/boaz/work/binah_be/src/apps/run_experiments/ut/input.csv"
+    },
+    "model": {
+        "class": "tar",
+        "type": "regression",
+        "repeations": 1
+    },
+    "actions": [
+        {
+            "action": "model.mlp",
+            "attr": {
+                "iterations": 100,
+                "epsilon": 0.000001,
+                "activation-function": {
+                    "alpha": 0, 
+                    "beta": 0
+                },
+                "train-method": {
+                    "type": "rprop",
+                    "arg-a": 0,
+                    "arg-b": 0
+                },
+                "layers": [16, 8, 4]
+            }
+        }
+    ],
+    "evaluation": [
+        "auc-roc", "ks-test", "mse"
+    ],
+    "validation": {
+        "action": "precent",
+        "attr": {
+            "arg": 10
+        }
+    }
+}

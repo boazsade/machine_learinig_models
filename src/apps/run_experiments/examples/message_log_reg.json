@@ -1,0 +1,33 @@
+{
+    "dataset": "59705aa8aa39d855e5678b50",
+    "datasource": {
+            "path": "/home/boaz/work/binah_be/src/apps/run_experiments/ut/input.csv"
+    },
+    "model": {
+        "class": "tar",
+        "type": "regression",
+        "repeations": 1
+    },
+    "actions": [
+        {
+            "action": "model.log-reg",
+            "attr": {
+                "learning-rate": 0.001,
+                "iterations": 1000,
+                "min-batch-size": 1,
+                "reg-level": "reg_l2",
+                "batch-type": "batch"
+            }
+        }
+    ],
+    "evaluation": [
+        "auc-roc", "ks-test"
+    ],
+    "validation": {
+        "action": "precent",
+        "attr": {
+            "arg": 10
+        }
+    }
+}
+

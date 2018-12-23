@@ -1,0 +1,22 @@
+{
+    "dataset": "59705aa8aa39d855e5678b50",
+    "datasource": {
+        "path": "/home/boaz/work/binah_be/src/apps/run_experiments/ut/input.csv"
+    },
+    "model": {
+        "class": "tar",
+        "repeations": 43
+    },
+    "actions": [{
+        "action": "model.svm",
+        "attr": {
+        }
+    }],
+    "evaluation": ["auc-roc", "logisic-los", "ks-test"],
+    "validation": {
+        "action": "precent",
+        "attr": {
+            "arg": 37
+        }
+    }
+}
